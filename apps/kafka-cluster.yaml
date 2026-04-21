@@ -1,0 +1,27 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: Kafka
+metadata:
+  name: queueit-streaming-cluster
+  namespace: kafka
+spec:
+  kafka:
+    version: 3.7.0
+    replicas: 1 # Kept to 1 for the lab to save AWS resources
+    listeners:
+      - name: plain
+        port: 9092
+        type: internal
+        tls: false
+    config:
+      offsets.topic.replication.factor: 1
+      transaction.state.log.replication.factor: 1
+      transaction.state.log.min.isr: 1
+    storage:
+      type: ephemeral # Using ephemeral memory for the lab to avoid EBS volume costs
+  zookeeper:
+    replicas: 1
+    storage:
+      type: ephemeral
+  entityOperator:
+    topicOperator: {}
+    userOperator: {}
