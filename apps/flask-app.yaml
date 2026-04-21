@@ -17,9 +17,8 @@ spec:
     spec:
       containers:
       - name: web
-        # UPDATE THIS LINE: <YOUR-ECR-URL>:<YOUR-COMMIT-SHA>
         # Example: 123456789012.dkr.ecr.us-east-1.amazonaws.com/platform-app-repo:a1b2c3d
-        image: YOUR_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/platform-app-repo:YOUR_COMMIT_SHA
+        image: 230150030147.dkr.ecr.us-east-1.amazonaws.com/platform-app-repo:3bb01da15f3246a47f4ef1fd3c76fb410e683848
         ports:
         - containerPort: 8080
         resources:
