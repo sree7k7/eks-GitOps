@@ -18,7 +18,7 @@ spec:
       containers:
       - name: web
         # Example: 123456789012.dkr.ecr.us-east-1.amazonaws.com/platform-app-repo:a1b2c3d
-        image: 230150030147.dkr.ecr.us-east-1.amazonaws.com/platform-app-repo:8d30df8c38b3358b6b10d583e17d22a61cc4eced
+        image: 230150030147.dkr.ecr.us-east-1.amazonaws.com/platform-app-repo:a45fd373535f886b5a2c58247c6689f710bf49c8
         ports:
         - containerPort: 8080
         livenessProbe:
