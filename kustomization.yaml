@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# This tells Kustomize (and the robot) which files belong to this app
+resources:
+  - flask-app.yaml
